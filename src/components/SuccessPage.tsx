@@ -1,93 +1,161 @@
-import { Heart, Sparkles } from "lucide-react";
+import { Heart, Sparkles, Star } from "lucide-react";
 import ConfettiHearts from "./ConfettiHearts";
 import teddyBear from "@/assets/teddy-bear.png";
+import roses from "@/assets/roses.png";
 
 const SuccessPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 py-8">
       <ConfettiHearts />
       
       {/* Background sparkles */}
       <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 20 }).map((_, i) => (
+        {Array.from({ length: 25 }).map((_, i) => (
           <Sparkles
             key={i}
             className="absolute text-sparkle animate-sparkle"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              width: 16 + Math.random() * 16,
-              height: 16 + Math.random() * 16,
+              width: 14 + Math.random() * 14,
+              height: 14 + Math.random() * 14,
               animationDelay: `${Math.random() * 2}s`,
+            }}
+          />
+        ))}
+        {Array.from({ length: 8 }).map((_, i) => (
+          <Star
+            key={`star-${i}`}
+            className="absolute text-sparkle fill-sparkle animate-sparkle opacity-60"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: 8 + Math.random() * 10,
+              height: 8 + Math.random() * 10,
+              animationDelay: `${Math.random() * 3}s`,
             }}
           />
         ))}
       </div>
 
-      <div className="text-center z-10">
-        {/* Animated hearts */}
-        <div className="flex justify-center gap-4 mb-4">
-          <Heart 
-            className="w-10 h-10 text-heart-red fill-heart-red animate-pulse-love" 
-            style={{ animationDelay: '0s' }}
+      <div className="text-center z-10 max-w-xl mx-auto">
+        {/* Roses and teddy */}
+        <div className="flex justify-center items-end gap-2 mb-6">
+          <img 
+            src={roses} 
+            alt="Beautiful roses" 
+            className="w-24 h-24 sm:w-32 sm:h-32 object-contain drop-shadow-xl animate-float-heart"
+            style={{ animationDelay: '0.5s' }}
           />
-          <Heart 
-            className="w-14 h-14 text-heart-pink fill-heart-pink animate-pulse-love" 
-            style={{ animationDelay: '0.2s' }}
-          />
-          <Heart 
-            className="w-10 h-10 text-heart-red fill-heart-red animate-pulse-love" 
-            style={{ animationDelay: '0.4s' }}
-          />
-        </div>
-
-        {/* Teddy bear celebrating */}
-        <div className="flex justify-center mb-4">
           <img 
             src={teddyBear} 
             alt="Happy teddy bear" 
-            className="w-28 h-28 sm:w-36 sm:h-36 object-contain animate-wiggle drop-shadow-xl"
+            className="w-28 h-28 sm:w-36 sm:h-36 object-contain animate-bounce-cute drop-shadow-xl"
+          />
+          <img 
+            src={roses} 
+            alt="Beautiful roses" 
+            className="w-24 h-24 sm:w-32 sm:h-32 object-contain drop-shadow-xl animate-float-heart scale-x-[-1]"
           />
         </div>
 
-        <h1 className="font-script text-6xl sm:text-8xl text-gradient-love mb-4 animate-bounce-cute">
+        {/* Animated hearts row */}
+        <div className="flex justify-center gap-3 mb-4">
+          {[...Array(5)].map((_, i) => (
+            <Heart 
+              key={i}
+              className="w-6 h-6 sm:w-8 sm:h-8 text-heart-red fill-heart-red animate-pulse-love" 
+              style={{ animationDelay: `${i * 0.15}s` }}
+            />
+          ))}
+        </div>
+
+        <h1 className="font-script text-6xl sm:text-8xl text-gradient-love mb-2 animate-bounce-cute">
           Yaaay!
         </h1>
-        
-        <p className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-          I knew you'd say yes, Bhoomi! 💕
+
+        <p className="text-xl sm:text-2xl font-bold text-foreground mb-6">
+          I knew you'd say yes! 💕
         </p>
         
-        <p className="text-lg sm:text-xl text-muted-foreground mb-6 max-w-md mx-auto leading-relaxed">
-          You just made me the happiest person in the whole world! 
-          Can't wait to spend Valentine's Day with you! 🌹
-        </p>
-
-        <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-heart-light/30 max-w-sm mx-auto mb-6">
-          <p className="font-script text-3xl sm:text-4xl text-gradient-love">
-            I love you so much,
+        {/* Love letter card */}
+        <div className="bg-card/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-2xl border border-heart-light/40 mb-6 relative overflow-hidden">
+          {/* Decorative corners */}
+          <div className="absolute top-4 left-4 flex gap-1">
+            <Heart className="w-3 h-3 text-heart-pink fill-heart-pink" />
+            <Heart className="w-2 h-2 text-heart-light fill-heart-light" />
+          </div>
+          <div className="absolute top-4 right-4 flex gap-1">
+            <Heart className="w-2 h-2 text-heart-light fill-heart-light" />
+            <Heart className="w-3 h-3 text-heart-pink fill-heart-pink" />
+          </div>
+          
+          <p className="font-script text-3xl sm:text-4xl text-gradient-love mb-4">
+            My Dearest Bhoomi,
           </p>
-          <p className="font-script text-4xl sm:text-5xl text-gradient-love mt-1">
-            Bhoomi! 💗
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center gap-4">
-          <div className="flex gap-3 text-3xl sm:text-4xl">
-            <span className="animate-bounce-cute">🥰</span>
-            <span className="animate-bounce-cute" style={{ animationDelay: '0.1s' }}>💗</span>
-            <span className="animate-bounce-cute" style={{ animationDelay: '0.2s' }}>✨</span>
-            <span className="animate-bounce-cute" style={{ animationDelay: '0.3s' }}>💕</span>
-            <span className="animate-bounce-cute" style={{ animationDelay: '0.4s' }}>🦋</span>
+          
+          <div className="text-base sm:text-lg text-foreground/90 leading-relaxed space-y-3 text-left px-2">
+            <p>
+              You have no idea how happy you just made me! 🥹
+            </p>
+            <p>
+              Every moment with you feels like magic. Your smile lights up my world, 
+              and your laughter is my favorite sound in the entire universe.
+            </p>
+            <p>
+              I promise to make this Valentine's Day unforgettable for you — 
+              filled with love, surprises, and all the happiness you deserve! 💫
+            </p>
+            <p>
+              Thank you for being the most amazing person in my life. 
+              I'm so lucky to have you, and I fall more in love with you every single day.
+            </p>
+          </div>
+          
+          <div className="mt-6 pt-4 border-t border-heart-light/30">
+            <p className="font-script text-2xl sm:text-3xl text-gradient-love">
+              Forever & Always Yours,
+            </p>
+            <div className="flex justify-center gap-2 mt-2 text-2xl">
+              <span>💗</span>
+              <span>🌹</span>
+              <span>💗</span>
+            </div>
           </div>
         </div>
+
+        {/* Big love declaration */}
+        <div className="bg-love-gradient rounded-2xl p-5 sm:p-6 shadow-xl mb-6">
+          <p className="font-script text-3xl sm:text-5xl text-white drop-shadow-md">
+            I Love You, Bhoomi!
+          </p>
+          <p className="text-white/90 text-lg sm:text-xl mt-2 font-medium">
+            More than words could ever express 💕
+          </p>
+        </div>
+
+        {/* Emoji celebration */}
+        <div className="flex justify-center gap-3 text-3xl sm:text-4xl mb-4">
+          <span className="animate-bounce-cute">🥰</span>
+          <span className="animate-bounce-cute" style={{ animationDelay: '0.1s' }}>💗</span>
+          <span className="animate-bounce-cute" style={{ animationDelay: '0.2s' }}>✨</span>
+          <span className="animate-bounce-cute" style={{ animationDelay: '0.3s' }}>🌹</span>
+          <span className="animate-bounce-cute" style={{ animationDelay: '0.4s' }}>💕</span>
+          <span className="animate-bounce-cute" style={{ animationDelay: '0.5s' }}>🦋</span>
+        </div>
+
+        <p className="text-muted-foreground text-sm sm:text-base italic">
+          Can't wait to hold your hand and make beautiful memories together 🤍
+        </p>
       </div>
 
       {/* Bottom decorative hearts */}
-      <div className="absolute bottom-8 flex gap-6">
-        <Heart className="w-8 h-8 text-heart-light fill-heart-light animate-float-heart" />
-        <Heart className="w-10 h-10 text-heart-pink fill-heart-pink animate-float-heart" style={{ animationDelay: '0.5s' }} />
-        <Heart className="w-8 h-8 text-heart-light fill-heart-light animate-float-heart" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-6 flex gap-5">
+        <Heart className="w-6 h-6 text-heart-light fill-heart-light animate-float-heart" />
+        <Heart className="w-8 h-8 text-heart-pink fill-heart-pink animate-float-heart" style={{ animationDelay: '0.3s' }} />
+        <Heart className="w-10 h-10 text-heart-red fill-heart-red animate-float-heart" style={{ animationDelay: '0.6s' }} />
+        <Heart className="w-8 h-8 text-heart-pink fill-heart-pink animate-float-heart" style={{ animationDelay: '0.9s' }} />
+        <Heart className="w-6 h-6 text-heart-light fill-heart-light animate-float-heart" style={{ animationDelay: '1.2s' }} />
       </div>
     </div>
   );

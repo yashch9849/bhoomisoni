@@ -1,5 +1,6 @@
 import { Heart, Sparkles } from "lucide-react";
 import ConfettiHearts from "./ConfettiHearts";
+import teddyBear from "@/assets/teddy-bear.png";
 
 const SuccessPage = () => {
   return (
@@ -25,46 +26,60 @@ const SuccessPage = () => {
 
       <div className="text-center z-10">
         {/* Animated hearts */}
-        <div className="flex justify-center gap-4 mb-6">
+        <div className="flex justify-center gap-4 mb-4">
           <Heart 
-            className="w-12 h-12 text-heart-red fill-heart-red animate-pulse-love" 
+            className="w-10 h-10 text-heart-red fill-heart-red animate-pulse-love" 
             style={{ animationDelay: '0s' }}
           />
           <Heart 
-            className="w-16 h-16 text-heart-pink fill-heart-pink animate-pulse-love" 
+            className="w-14 h-14 text-heart-pink fill-heart-pink animate-pulse-love" 
             style={{ animationDelay: '0.2s' }}
           />
           <Heart 
-            className="w-12 h-12 text-heart-red fill-heart-red animate-pulse-love" 
+            className="w-10 h-10 text-heart-red fill-heart-red animate-pulse-love" 
             style={{ animationDelay: '0.4s' }}
           />
         </div>
 
-        <h1 className="font-script text-6xl sm:text-8xl text-gradient-love mb-6 animate-bounce-cute">
+        {/* Teddy bear celebrating */}
+        <div className="flex justify-center mb-4">
+          <img 
+            src={teddyBear} 
+            alt="Happy teddy bear" 
+            className="w-28 h-28 sm:w-36 sm:h-36 object-contain animate-wiggle drop-shadow-xl"
+          />
+        </div>
+
+        <h1 className="font-script text-6xl sm:text-8xl text-gradient-love mb-4 animate-bounce-cute">
           Yaaay!
         </h1>
         
-        <p className="text-2xl sm:text-3xl font-semibold text-foreground mb-4">
-          I knew you'd say yes! 💕
+        <p className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
+          I knew you'd say yes, Bhoomi! 💕
         </p>
         
-        <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-md mx-auto">
-          You just made me the happiest person in the world! 
+        <p className="text-lg sm:text-xl text-muted-foreground mb-6 max-w-md mx-auto leading-relaxed">
+          You just made me the happiest person in the whole world! 
           Can't wait to spend Valentine's Day with you! 🌹
         </p>
 
-        <div className="flex flex-col items-center gap-4">
-          <div className="flex gap-2 text-4xl animate-bounce-cute">
-            <span>🥰</span>
-            <span style={{ animationDelay: '0.1s' }}>💗</span>
-            <span style={{ animationDelay: '0.2s' }}>✨</span>
-            <span style={{ animationDelay: '0.3s' }}>💕</span>
-            <span style={{ animationDelay: '0.4s' }}>🦋</span>
-          </div>
-          
-          <p className="font-script text-3xl sm:text-4xl text-primary mt-4">
-            I love you so much!
+        <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-heart-light/30 max-w-sm mx-auto mb-6">
+          <p className="font-script text-3xl sm:text-4xl text-gradient-love">
+            I love you so much,
           </p>
+          <p className="font-script text-4xl sm:text-5xl text-gradient-love mt-1">
+            Bhoomi! 💗
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex gap-3 text-3xl sm:text-4xl">
+            <span className="animate-bounce-cute">🥰</span>
+            <span className="animate-bounce-cute" style={{ animationDelay: '0.1s' }}>💗</span>
+            <span className="animate-bounce-cute" style={{ animationDelay: '0.2s' }}>✨</span>
+            <span className="animate-bounce-cute" style={{ animationDelay: '0.3s' }}>💕</span>
+            <span className="animate-bounce-cute" style={{ animationDelay: '0.4s' }}>🦋</span>
+          </div>
         </div>
       </div>
 

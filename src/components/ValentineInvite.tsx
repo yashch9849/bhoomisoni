@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import FloatingHearts from "./FloatingHearts";
 import RunawayButton from "./RunawayButton";
 import SuccessPage from "./SuccessPage";
+import teddyBear from "@/assets/teddy-bear.png";
 
 const ValentineInvite = () => {
   const [accepted, setAccepted] = useState(false);
@@ -13,42 +14,57 @@ const ValentineInvite = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 py-8">
       <FloatingHearts />
       
       {/* Decorative sparkles */}
       <Sparkles className="absolute top-10 left-10 w-8 h-8 text-sparkle animate-sparkle" />
       <Sparkles className="absolute top-20 right-16 w-6 h-6 text-sparkle animate-sparkle" style={{ animationDelay: '0.5s' }} />
       <Sparkles className="absolute bottom-32 left-20 w-7 h-7 text-sparkle animate-sparkle" style={{ animationDelay: '1s' }} />
+      <Sparkles className="absolute top-1/4 right-8 w-5 h-5 text-sparkle animate-sparkle" style={{ animationDelay: '1.5s' }} />
 
       <div className="text-center z-10 max-w-lg mx-auto">
-        {/* Animated heart header */}
-        <div className="flex justify-center mb-6">
-          <Heart 
-            className="w-20 h-20 sm:w-24 sm:h-24 text-heart-red fill-heart-red animate-pulse-love drop-shadow-lg" 
+        {/* Cute teddy bear */}
+        <div className="flex justify-center mb-4">
+          <img 
+            src={teddyBear} 
+            alt="Cute teddy bear holding a heart" 
+            className="w-32 h-32 sm:w-40 sm:h-40 object-contain animate-bounce-cute drop-shadow-xl"
           />
         </div>
 
-        {/* Main heading */}
-        <h1 className="font-script text-5xl sm:text-7xl text-gradient-love mb-4">
-          Hey Beautiful
+        {/* Main heading with her name */}
+        <h1 className="font-script text-5xl sm:text-7xl text-gradient-love mb-2">
+          Hey Bhoomi
         </h1>
+        
+        <div className="flex justify-center gap-1 mb-4">
+          <Heart className="w-4 h-4 text-heart-pink fill-heart-pink" />
+          <Heart className="w-5 h-5 text-heart-red fill-heart-red animate-pulse-love" />
+          <Heart className="w-4 h-4 text-heart-pink fill-heart-pink" />
+        </div>
 
-        <p className="text-xl sm:text-2xl font-medium text-foreground mb-8">
-          I have a very important question for you...
+        <p className="text-lg sm:text-xl font-medium text-muted-foreground mb-6">
+          I have a very special question for you...
         </p>
 
-        {/* The question */}
-        <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl border border-border mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
+        {/* The question card */}
+        <div className="bg-card/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-2xl border border-heart-light/50 mb-8 relative overflow-hidden">
+          {/* Decorative corner hearts */}
+          <Heart className="absolute top-3 left-3 w-4 h-4 text-heart-light fill-heart-light opacity-60" />
+          <Heart className="absolute top-3 right-3 w-4 h-4 text-heart-light fill-heart-light opacity-60" />
+          <Heart className="absolute bottom-3 left-3 w-4 h-4 text-heart-light fill-heart-light opacity-60" />
+          <Heart className="absolute bottom-3 right-3 w-4 h-4 text-heart-light fill-heart-light opacity-60" />
+          
+          <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
             Will you be my
           </h2>
-          <p className="font-script text-5xl sm:text-6xl text-gradient-love">
+          <p className="font-script text-5xl sm:text-6xl text-gradient-love leading-tight">
             Valentine?
           </p>
-          <div className="flex justify-center gap-2 mt-4 text-2xl">
+          <div className="flex justify-center gap-2 mt-4 text-xl sm:text-2xl">
             <span>🌹</span>
-            <span>💕</span>
+            <span className="animate-pulse-love">💕</span>
             <span>✨</span>
           </div>
         </div>
@@ -64,6 +80,7 @@ const ValentineInvite = () => {
               hover:scale-110 hover:shadow-2xl
               transition-all duration-300
               animate-bounce-cute
+              border-2 border-white/20
             "
             onClick={() => setAccepted(true)}
           >
@@ -73,8 +90,8 @@ const ValentineInvite = () => {
           <RunawayButton />
         </div>
 
-        <p className="text-sm text-muted-foreground mt-8 italic">
-          (Hint: There's only one right answer 😉)
+        <p className="text-sm text-muted-foreground mt-6 italic opacity-80">
+          (Psst... There's only one right answer 😉)
         </p>
       </div>
 

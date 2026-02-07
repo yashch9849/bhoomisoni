@@ -71,11 +71,11 @@ const SuccessPage = () => {
         </div>
 
         <h1 className="font-script text-6xl sm:text-8xl text-gradient-love mb-2 animate-bounce-cute">
-          Yaaay!
+          She Said Yes!
         </h1>
 
         <p className="text-xl sm:text-2xl font-bold text-foreground mb-6">
-          I knew you'd say yes! 💕
+          You're going to be my wife! �✨
         </p>
         
         {/* Love letter card */}
@@ -91,35 +91,43 @@ const SuccessPage = () => {
           </div>
           
           <p className="font-script text-3xl sm:text-4xl text-gradient-love mb-4">
-            My Dearest Bhoomi,
+            My Forever Love,
           </p>
           
           <div className="text-base sm:text-lg text-foreground/90 leading-relaxed space-y-3 text-left px-2">
             <p>
-              You have no idea how happy you just made me! 🥹
+              You have made me the happiest man alive! 🥹💍
             </p>
             <p>
-              Every moment with you feels like magic. Your smile lights up my world, 
-              and your laughter is my favorite sound in the entire universe.
+              From the moment I saw you, I knew you were the one I wanted to spend forever with. 
+              Your kindness, your beauty, your laughter — everything about you makes my heart overflow with love.
             </p>
             <p>
-              I promise to make this Valentine's Day unforgettable for you — 
-              filled with love, surprises, and all the happiness you deserve! 💫
+              I promise to choose you every single day, just like I do today. 
+              To stand by you through every joy and every challenge. 
+              To love you more deeply with each passing year.
             </p>
             <p>
-              Thank you for being the most amazing person in my life. 
-              I'm so lucky to have you, and I fall more in love with you every single day.
+              You are my greatest blessing, my true love, and now, my fiancée. 
+              I cannot wait to marry you and build a lifetime of beautiful memories together.
+            </p>
+            <p>
+              Thank you for saying yes. Thank you for choosing me. 
+              Thank you for being the most incredible woman I could ever ask for.
             </p>
           </div>
           
           <div className="mt-6 pt-4 border-t border-heart-light/30">
             <p className="font-script text-2xl sm:text-3xl text-gradient-love">
-              Forever & Always Yours,
+              All My Love, Forever,
+            </p>
+            <p className="text-foreground/70 mt-1 text-sm">
+              Your soon-to-be husband 💕
             </p>
             <div className="flex justify-center gap-2 mt-2 text-2xl">
+              <span>�</span>
               <span>💗</span>
-              <span>🌹</span>
-              <span>💗</span>
+              <span>�</span>
             </div>
           </div>
         </div>
@@ -130,22 +138,22 @@ const SuccessPage = () => {
             I Love You, Bhoomi!
           </p>
           <p className="text-white/90 text-lg sm:text-xl mt-2 font-medium">
-            More than words could ever express 💕
+            My soon-to-be wife, my soulmate, my forever �✨
           </p>
         </div>
 
         {/* Emoji celebration */}
         <div className="flex justify-center gap-3 text-3xl sm:text-4xl mb-4">
-          <span className="animate-bounce-cute">🥰</span>
+          <span className="animate-bounce-cute">💍</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.1s' }}>💗</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.2s' }}>✨</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.3s' }}>🌹</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.4s' }}>💕</span>
-          <span className="animate-bounce-cute" style={{ animationDelay: '0.5s' }}>🦋</span>
+          <span className="animate-bounce-cute" style={{ animationDelay: '0.5s' }}>👰</span>
         </div>
 
         <p className="text-muted-foreground text-sm sm:text-base italic">
-          Can't wait to hold your hand and make beautiful memories together 🤍
+          The start of our happily ever after begins now 💍❤️
         </p>
       </div>
 

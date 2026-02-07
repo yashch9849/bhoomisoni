@@ -45,7 +45,7 @@ const ValentineInvite = () => {
         </div>
 
         <p className="text-lg sm:text-xl font-medium text-muted-foreground mb-6">
-          I have a very special question for you...
+          Every day, I choose you. Today, I want to ask you forever...
         </p>
 
         {/* The question card */}
@@ -57,10 +57,10 @@ const ValentineInvite = () => {
           <Heart className="absolute bottom-3 right-3 w-4 h-4 text-heart-light fill-heart-light opacity-60" />
           
           <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
-            Will you be my
+            Will you marry me and
           </h2>
           <p className="font-script text-5xl sm:text-6xl text-gradient-love leading-tight">
-            Valentine?
+            be mine forever?
           </p>
           <div className="flex justify-center gap-2 mt-4 text-xl sm:text-2xl">
             <span>🌹</span>
@@ -84,14 +84,14 @@ const ValentineInvite = () => {
             "
             onClick={() => setAccepted(true)}
           >
-            Yes! 💖
+            I Do! �
           </Button>
 
           <RunawayButton />
         </div>
 
         <p className="text-sm text-muted-foreground mt-6 italic opacity-80">
-          (Psst... There's only one right answer 😉)
+          (I promise to choose you every single day �)
         </p>
       </div>
 

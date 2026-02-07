@@ -108,7 +108,7 @@ const SuccessPage = () => {
               To love you more deeply with each passing year.
             </p>
             <p>
-              You are my greatest blessing,  
+              You are a blessing,  
             </p>
             <p>
               Thank you for saying yes. Thank you for choosing me. 

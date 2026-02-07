@@ -100,7 +100,7 @@ const SuccessPage = () => {
             </p>
             <p>
               From the moment I saw you, I knew you were the one I wanted to spend forever with. 
-              Your kindness, your beauty, your laughter — everything about you makes my heart overflow with love.
+              Your kindness, your beauty, your laughter everything about you makes my heart overflow with love.
             </p>
             <p>
               I promise to choose you every single day, just like I do today. 
@@ -108,12 +108,10 @@ const SuccessPage = () => {
               To love you more deeply with each passing year.
             </p>
             <p>
-              I promise to make this Valentine's Day unforgettable for you — 
-              filled with love, surprises, and all the happiness you deserve! 💫
+              You are my greatest blessing,  
             </p>
             <p>
-              Thank you for being the most amazing person in my life. 
-              I'm so lucky to have you, and I fall more in love with you every single day.
+              Thank you for saying yes. Thank you for choosing me. 
             </p>
           </div>
           
@@ -138,22 +136,22 @@ const SuccessPage = () => {
             I Love You, Bhoomi!
           </p>
           <p className="text-white/90 text-lg sm:text-xl mt-2 font-medium">
-            My soon-to-be wife, my soulmate, my forever �✨
+            I hope we have a great time together
           </p>
         </div>
 
         {/* Emoji celebration */}
         <div className="flex justify-center gap-3 text-3xl sm:text-4xl mb-4">
-          
+          <span className="animate-bounce-cute">💍</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.1s' }}>💗</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.2s' }}>✨</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.3s' }}>🌹</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.4s' }}>💕</span>
-          
+          <span className="animate-bounce-cute" style={{ animationDelay: '0.5s' }}>👰</span>
         </div>
 
         <p className="text-muted-foreground text-sm sm:text-base italic">
-          Can't wait to hold your hand and make beautiful memories together 🤍
+          The start of our happily ever after begins now 💍❤️
         </p>
       </div>
 

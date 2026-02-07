@@ -20,7 +20,7 @@ function copyIndexTo404() {
 }
 
 export default defineConfig(({ mode }) => ({
-  base: "/bhoomisoni/", // 👈 ADD THIS
+  base: process.env.NODE_ENV === "production" ? "/bhoomisoni/" : "/",
   server: {
     host: "::",
     port: 8080,

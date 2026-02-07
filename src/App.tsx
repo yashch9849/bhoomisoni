@@ -8,12 +8,15 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Determine the basename based on environment
+const basename = import.meta.env.MODE === "production" ? "/bhoomisoni" : "/";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/bhoomisoni">
+      <BrowserRouter basename={basename}>
 
         <Routes>
           <Route path="/" element={<Index />} />

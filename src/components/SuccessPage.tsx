@@ -71,11 +71,11 @@ const SuccessPage = () => {
         </div>
 
         <h1 className="font-script text-6xl sm:text-8xl text-gradient-love mb-2 animate-bounce-cute">
-          She Said Yes!
+          Yaaay!
         </h1>
 
         <p className="text-xl sm:text-2xl font-bold text-foreground mb-6">
-          You're going to be my wife! �✨
+          I knew you'd say yes! 💕
         </p>
         
         {/* Love letter card */}
@@ -91,12 +91,12 @@ const SuccessPage = () => {
           </div>
           
           <p className="font-script text-3xl sm:text-4xl text-gradient-love mb-4">
-            My Forever Love,
+            My Dearest Bhoomi,
           </p>
           
           <div className="text-base sm:text-lg text-foreground/90 leading-relaxed space-y-3 text-left px-2">
             <p>
-              You have made me the happiest man alive! 🥹💍
+              You have no idea how happy you just made me! 🥹
             </p>
             <p>
               From the moment I saw you, I knew you were the one I wanted to spend forever with. 
@@ -108,21 +108,21 @@ const SuccessPage = () => {
               To love you more deeply with each passing year.
             </p>
             <p>
-              You are my greatest blessing, my true love, and now, my fiancée. 
-              I cannot wait to marry you and build a lifetime of beautiful memories together.
+              I promise to make this Valentine's Day unforgettable for you — 
+              filled with love, surprises, and all the happiness you deserve! 💫
             </p>
             <p>
-              Thank you for saying yes. Thank you for choosing me. 
-              Thank you for being the most incredible woman I could ever ask for.
+              Thank you for being the most amazing person in my life. 
+              I'm so lucky to have you, and I fall more in love with you every single day.
             </p>
           </div>
           
           <div className="mt-6 pt-4 border-t border-heart-light/30">
             <p className="font-script text-2xl sm:text-3xl text-gradient-love">
-              All My Love, Forever,
+              Forever & Always Yours,
             </p>
             <p className="text-foreground/70 mt-1 text-sm">
-              Your soon-to-be husband 💕
+              
             </p>
             <div className="flex justify-center gap-2 mt-2 text-2xl">
               <span>�</span>
@@ -144,16 +144,16 @@ const SuccessPage = () => {
 
         {/* Emoji celebration */}
         <div className="flex justify-center gap-3 text-3xl sm:text-4xl mb-4">
-          <span className="animate-bounce-cute">💍</span>
+          
           <span className="animate-bounce-cute" style={{ animationDelay: '0.1s' }}>💗</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.2s' }}>✨</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.3s' }}>🌹</span>
           <span className="animate-bounce-cute" style={{ animationDelay: '0.4s' }}>💕</span>
-          <span className="animate-bounce-cute" style={{ animationDelay: '0.5s' }}>👰</span>
+          
         </div>
 
         <p className="text-muted-foreground text-sm sm:text-base italic">
-          The start of our happily ever after begins now 💍❤️
+          Can't wait to hold your hand and make beautiful memories together 🤍
         </p>
       </div>
 
